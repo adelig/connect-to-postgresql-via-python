@@ -4,14 +4,17 @@ import os
 
 
 def config(filename='credentials.ini', section='postgresql'):
+    # Change the directory to the folder where the script itself is located
     path = os.path.dirname(os.path.abspath(__file__))
     os.chdir(path)
-    # create a parser
+    
+    # Create a parser
     parser = ConfigParser()
-    # read config file
+    
+    # Read config file
     parser.read(filename)
-
-    # get section, default to postgresql
+    
+    # Get section, default to postgresql
     db = {}
     if parser.has_section(section):
         params = parser.items(section)
@@ -27,14 +30,14 @@ def config(filename='credentials.ini', section='postgresql'):
 def connect():
     """ Connect to the PostgreSQL database server """
     try:
-        # read connection parameters
+        # Read connection parameters
         params = config()
 
         url = 'postgresql://{}:{}@{}:{}/{}'
         url = url.format(params['user'], params['password'], params['host'], \
                 int(params['port']), params['database'])
 
-        # connect to the PostgreSQL server
+        # Connect to the PostgreSQL server
         print('Connecting to the PostgreSQL database...')
         con = sqlalchemy.create_engine(url, client_encoding='utf8')
         print('Connected.')

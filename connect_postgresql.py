@@ -55,7 +55,7 @@ if __name__ == '__main__':
 
 	""" 
 	Perform the tasks of your interest
-    Like importing a PostgreSQL table as a DataFrame:
+    	Like importing a PostgreSQL table as a DataFrame
 	
 	import pandas as pd
 	df = pd.read_sql_table("table_name",conn)

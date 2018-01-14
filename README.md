@@ -1,4 +1,6 @@
 # PostgreSQL - Python connection
+![alt text](https://img.shields.io/badge/Python-2.7-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) <br />
 
 Τhe code is a framework through which the user can manipulate a relational PostgreSQL database in a pythonic way, like using Pandas DataFrames. <br />
 

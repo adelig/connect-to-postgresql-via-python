@@ -11,4 +11,4 @@ In order to run the script properly, the user has to update the provided configu
 The exact location of the port value in the pgAdmin 4 console is depicted in the below snapshot. <br />
  <br />
 
-![alt text](img/port.png)
+![alt text](img/Port.png)
